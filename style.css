@@ -13,12 +13,13 @@ border-bottom:1px solid #222;
 }
 
 .hero{
-height:90vh;
-background:url("banner.png") center/cover no-repeat;
+min-height:90vh;
+background:linear-gradient(180deg,#0a0a0a,#050505);
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+padding:60px 8%;
 }
 
 .hero h1{
