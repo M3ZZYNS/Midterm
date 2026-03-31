@@ -5,581 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Akuto. | Limited Drops</title>
 
+<link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:#0a0a0a;
-color:#e5e5e5;
-font-family:'Inter',sans-serif;
-line-height:1.6;
-}
-
-img{
-max-width:100%;
-display:block;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-/* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 8%;
-background:#0a0a0a;
-border-bottom:1px solid #222;
-position:sticky;
-top:0;
-z-index:999;
-}
-
-.logo{
-font-family:'Cinzel',serif;
-font-size:22px;
-letter-spacing:4px;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:35px;
-}
-
-nav a{
-color:#ccc;
-font-size:13px;
-letter-spacing:2px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:white;
-}
-
-/* HERO */
-
-.hero{
-min-height:90vh;
-background:
-linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.65)),
-url("banner.png") center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:60px 8%;
-}
-
-.hero-content{
-max-width:900px;
-}
-
-.hero h1{
-font-family:'Cinzel',serif;
-font-size:64px;
-letter-spacing:8px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:18px;
-color:#cfcfcf;
-max-width:700px;
-margin:0 auto 30px;
-}
-
-.hero-btn{
-display:inline-block;
-padding:16px 36px;
-border:1px solid #aaa;
-color:#eee;
-letter-spacing:2px;
-font-size:13px;
-transition:0.3s;
-}
-
-.hero-btn:hover{
-border:1px solid #fff;
-background:#fff;
-color:#0a0a0a;
-}
-
-/* SECTION GLOBAL */
-
-section{
-padding:100px 10%;
-}
-
-.section-title{
-font-family:'Cinzel',serif;
-font-size:30px;
-margin-bottom:16px;
-letter-spacing:3px;
-}
-
-.section-subtitle{
-color:#9d9d9d;
-max-width:700px;
-margin-bottom:50px;
-}
-
-/* FEATURES */
-
-.features-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-}
-
-.feature-card{
-background:#111;
-border:1px solid #222;
-padding:30px;
-transition:0.3s;
-}
-
-.feature-card:hover{
-border-color:#555;
-transform:translateY(-5px);
-}
-
-.feature-icon{
-font-size:28px;
-margin-bottom:18px;
-}
-
-.feature-card h3{
-font-size:16px;
-letter-spacing:2px;
-margin-bottom:12px;
-}
-
-.feature-card p{
-color:#a8a8a8;
-font-size:15px;
-}
-
-/* PRODUCTS */
-
-.products{
-padding-top:40px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:40px;
-}
-
-.product{
-background:#111;
-padding:15px;
-border:1px solid #222;
-transition:0.35s;
-cursor:pointer;
-}
-
-.product:hover{
-border:1px solid #555;
-transform:translateY(-6px);
-}
-
-.product img{
-width:100%;
-height:320px;
-object-fit:cover;
-}
-
-.product h3{
-margin-top:15px;
-font-size:15px;
-letter-spacing:2px;
-}
-
-.price{
-color:#888;
-margin-top:5px;
-}
-
-/* SOCIAL PROOF */
-
-.proof-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-margin-bottom:50px;
-}
-
-.stat-box,
-.testimonial{
-background:#111;
-border:1px solid #222;
-padding:30px;
-}
-
-.stat-number{
-font-family:'Cinzel',serif;
-font-size:34px;
-letter-spacing:2px;
-margin-bottom:8px;
-}
-
-.stat-label{
-color:#a8a8a8;
-font-size:14px;
-letter-spacing:1px;
-}
-
-.testimonial p{
-color:#d5d5d5;
-font-size:15px;
-margin-bottom:16px;
-}
-
-.testimonial span{
-color:#8f8f8f;
-font-size:13px;
-letter-spacing:1px;
-}
-
-/* CTA */
-
-.cta{
-background:#111;
-border-top:1px solid #222;
-border-bottom:1px solid #222;
-text-align:center;
-}
-
-.cta h2{
-font-family:'Cinzel',serif;
-font-size:34px;
-letter-spacing:4px;
-margin-bottom:15px;
-}
-
-.cta p{
-color:#b5b5b5;
-max-width:650px;
-margin:0 auto 30px;
-}
-
-.cta-btn{
-display:inline-block;
-padding:16px 36px;
-border:1px solid #aaa;
-color:#eee;
-letter-spacing:2px;
-font-size:13px;
-transition:0.3s;
-}
-
-.cta-btn:hover{
-background:#fff;
-color:#0a0a0a;
-border-color:#fff;
-}
-
-/* CONTACT */
-
-.contact-grid{
-display:grid;
-grid-template-columns:1.2fr 0.8fr;
-gap:40px;
-align-items:start;
-}
-
-.contact-form{
-background:#111;
-border:1px solid #222;
-padding:30px;
-}
-
-.contact-form label{
-display:block;
-margin-bottom:10px;
-font-size:13px;
-letter-spacing:2px;
-color:#cfcfcf;
-}
-
-.contact-form input,
-.contact-form textarea{
-width:100%;
-background:#0a0a0a;
-border:1px solid #2a2a2a;
-color:#eee;
-padding:14px;
-margin-bottom:20px;
-font-family:'Inter',sans-serif;
-}
-
-.contact-form textarea{
-min-height:140px;
-resize:vertical;
-}
-
-.contact-form button{
-padding:14px 30px;
-background:none;
-border:1px solid #aaa;
-color:#eee;
-letter-spacing:2px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.contact-form button:hover{
-background:#fff;
-color:#0a0a0a;
-border-color:#fff;
-}
-
-.contact-info{
-background:#111;
-border:1px solid #222;
-padding:30px;
-}
-
-.contact-info h3{
-font-size:16px;
-letter-spacing:2px;
-margin-bottom:20px;
-}
-
-.contact-info p{
-color:#a8a8a8;
-margin-bottom:14px;
-}
-
-.social-links{
-display:flex;
-flex-direction:column;
-gap:12px;
-margin-top:20px;
-}
-
-.social-links a{
-color:#ccc;
-transition:0.3s;
-letter-spacing:1px;
-}
-
-.social-links a:hover{
-color:#fff;
-}
-
-/* PRODUCT VIEW */
-
-.product-view{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(10,10,10,0.96);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:1000;
-padding:30px;
-}
-
-.view-container{
-display:flex;
-gap:80px;
-width:80%;
-max-width:1200px;
-animation:fadeIn 0.4s ease;
-position:relative;
-}
-
-.view-image{
-overflow:hidden;
-}
-
-.view-image img{
-width:500px;
-max-width:100%;
-transition:transform 0.4s ease;
-}
-
-.view-image:hover img{
-transform:scale(1.05);
-}
-
-.gallery{
-display:flex;
-gap:10px;
-margin-top:15px;
-flex-wrap:wrap;
-}
-
-.gallery img{
-width:60px;
-height:60px;
-object-fit:cover;
-border:1px solid #333;
-cursor:pointer;
-}
-
-.gallery img:hover{
-border:1px solid #aaa;
-}
-
-.view-info{
-max-width:400px;
-}
-
-.view-info h1{
-font-family:'Cinzel',serif;
-letter-spacing:3px;
-margin-bottom:10px;
-}
-
-.view-info ul{
-padding-left:18px;
-margin-top:15px;
-color:#cfcfcf;
-}
-
-.view-info li{
-margin-bottom:10px;
-}
-
-.add-btn{
-margin:20px 0;
-padding:14px 30px;
-background:none;
-border:1px solid #aaa;
-color:#eee;
-letter-spacing:2px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.add-btn:hover{
-border:1px solid white;
-background:#fff;
-color:#0a0a0a;
-}
-
-.close{
-position:absolute;
-top:-10px;
-right:0;
-font-size:30px;
-cursor:pointer;
-color:#999;
-}
-
-.close:hover{
-color:white;
-}
-
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-/* FOOTER */
-
-footer{
-padding:40px;
-text-align:center;
-border-top:1px solid #222;
-font-size:13px;
-color:#666;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 992px){
-
-.hero h1{
-font-size:46px;
-letter-spacing:5px;
-}
-
-.features-grid,
-.proof-grid,
-.contact-grid,
-.view-container{
-grid-template-columns:1fr;
-display:grid;
-gap:30px;
-}
-
-.view-container{
-width:100%;
-}
-
-.view-image img{
-width:100%;
-}
-
-nav{
-flex-direction:column;
-gap:18px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-gap:18px;
-}
-}
-
-@media (max-width: 640px){
-
-.hero{
-min-height:80vh;
-}
-
-.hero h1{
-font-size:34px;
-letter-spacing:3px;
-}
-
-.hero p{
-font-size:16px;
-}
-
-section{
-padding:80px 7%;
-}
-
-.section-title{
-font-size:24px;
-}
-
-.product img{
-height:260px;
-}
-}
-</style>
 </head>
 
 <body>
@@ -597,205 +24,96 @@ height:260px;
 <section class="hero">
 <div class="hero-content">
 <h1>DARK COLLECTION</h1>
-<p>Minimal streetwear shaped by gothic detail, oversized silhouettes, and limited drops built for people who want their style to stand apart.</p>
+<p>Minimal streetwear shaped by gothic detail and limited drops.</p>
 <a href="#featured" class="hero-btn">SHOP THE DROP</a>
 </div>
 </section>
 
 <section id="features">
 <h2 class="section-title">WHY AKUTO.</h2>
-<p class="section-subtitle">Every drop is designed to feel exclusive, wearable, and memorable. This landing page highlights the product value clearly so visitors understand the brand fast.</p>
 
 <div class="features-grid">
 <div class="feature-card">
-<div class="feature-icon">🖤</div>
 <h3>LIMITED DROPS</h3>
-<p>Each release is intentionally small to keep every piece rare, collectible, and harder to forget.</p>
+<p>Exclusive small releases.</p>
 </div>
 
 <div class="feature-card">
-<div class="feature-icon">✦</div>
 <h3>PREMIUM MATERIALS</h3>
-<p>Heavyweight cotton and elevated construction create pieces that feel substantial and built to last.</p>
+<p>Heavyweight cotton quality.</p>
 </div>
 
 <div class="feature-card">
-<div class="feature-icon">⚡</div>
 <h3>STATEMENT FIT</h3>
-<p>Relaxed oversized silhouettes inspired by skate culture and dark luxury styling for a stronger visual identity.</p>
+<p>Oversized streetwear silhouette.</p>
 </div>
 </div>
 </section>
 
 <section id="featured" class="products">
-<h2 class="section-title">FEATURED PRODUCTS</h2>
-<p class="section-subtitle">Explore a small preview of the latest collection. Click any product to open the detailed product view.</p>
+<h2 class="section-title">FEATURED</h2>
 
 <div class="grid">
 <div class="product" onclick="openView(['Mockup.png'],'GOTHIC CROSS HOODIE','$180')">
-<img src="Mockup.png" alt="Gothic Cross Hoodie">
+<img src="Mockup.png">
 <h3>GOTHIC CROSS HOODIE</h3>
 <p class="price">$180</p>
 </div>
 
 <div class="product" onclick="openView(['skater.png'],'BLACK DAGGER TEE','$95')">
-<img src="skater.png" alt="Black Dagger Tee">
+<img src="skater.png">
 <h3>BLACK DAGGER TEE</h3>
 <p class="price">$95</p>
-</div>
-
-<div class="product" onclick="openView(['Mockup.png'],'SHADOW SCRIPT ZIP','$160')">
-<img src="Mockup.png" alt="Shadow Script Zip">
-<h3>SHADOW SCRIPT ZIP</h3>
-<p class="price">$160</p>
 </div>
 </div>
 </section>
 
 <section id="proof">
 <h2 class="section-title">SOCIAL PROOF</h2>
-<p class="section-subtitle">Your rubric asks for social proof, so this section gives clear usage stats and testimonials to make the brand feel more trusted and conversion-focused.</p>
 
-<div class="proof-grid">
-<div class="stat-box">
-<div class="stat-number">2.4K+</div>
-<div class="stat-label">DROP FOLLOWERS</div>
-</div>
-
-<div class="stat-box">
-<div class="stat-number">4.9/5</div>
-<div class="stat-label">AVERAGE CUSTOMER RATING</div>
-</div>
-
-<div class="stat-box">
-<div class="stat-number">87%</div>
-<div class="stat-label">SELL-THROUGH ON LAST DROP</div>
-</div>
-</div>
-
-<div class="proof-grid">
-<div class="testimonial">
-<p>"The quality feels premium the second you open the package. The hoodie fit exactly how I wanted."</p>
-<span>— Jordan M.</span>
-</div>
-
-<div class="testimonial">
-<p>"Akuto stands out because it looks exclusive without trying too hard. The design is clean and dark."</p>
-<span>— Alexis R.</span>
-</div>
-
-<div class="testimonial">
-<p>"One of the few streetwear brands that actually feels different. The pieces look even better in person."</p>
-<span>— Chris T.</span>
-</div>
-</div>
+<p>4.9/5 Rating • 2,000+ Customers • 87% Sell-Out Rate</p>
 </section>
 
 <section class="cta">
 <h2>DON'T MISS THE NEXT DROP</h2>
-<p>Join the list for early access, release alerts, and exclusive product previews before the collection goes live to everyone else.</p>
 <a href="#contact" class="cta-btn">GET EARLY ACCESS</a>
 </section>
 
 <section id="contact">
-<h2 class="section-title">CONTACT AKUTO.</h2>
-<p class="section-subtitle">Your contact section needs an email form and social media links. This version includes both, and the form can stay non-functional for the assignment.</p>
+<h2 class="section-title">CONTACT</h2>
 
-<div class="contact-grid">
-<div class="contact-form">
 <form>
-<label for="name">NAME</label>
-<input type="text" id="name" name="name" placeholder="Your name">
-
-<label for="email">EMAIL</label>
-<input type="email" id="email" name="email" placeholder="Your email">
-
-<label for="message">MESSAGE</label>
-<textarea id="message" name="message" placeholder="Ask about drops, sizing, or collaborations"></textarea>
-
-<button type="submit">SEND MESSAGE</button>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button type="submit">SEND</button>
 </form>
-</div>
-
-<div class="contact-info">
-<h3>BRAND DETAILS</h3>
-<p>Email: hello@akutoapparel.com</p>
-<p>Instagram-first streetwear concept focused on exclusive dark aesthetic drops.</p>
-<p>Follow the brand and stay updated on new releases.</p>
 
 <div class="social-links">
 <a href="#">Instagram</a>
 <a href="#">TikTok</a>
-<a href="#">X / Twitter</a>
-<a href="#">Pinterest</a>
 </div>
-</div>
-</div>
+
 </section>
 
 <footer>
-© 2026 AKUTO APPAREL | LIMITED STREETWEAR DROPS
+© 2026 AKUTO
 </footer>
 
 <div id="product-view" class="product-view">
 <div class="view-container">
 
-<div class="view-image">
-<img id="main-img" alt="Product preview">
-<div class="gallery" id="gallery"></div>
-</div>
+<img id="main-img">
 
-<div class="view-info">
 <h1 id="view-title"></h1>
-<p class="price" id="view-price"></p>
+<p id="view-price"></p>
 
-<button class="add-btn">ADD TO BAG</button>
+<button onclick="closeView()">Close</button>
 
-<h3>DETAILS</h3>
-<ul>
-<li>Premium heavyweight cotton</li>
-<li>Skate culture inspired</li>
-<li>Limited drop release</li>
-<li>Relaxed oversized fit</li>
-</ul>
-</div>
-
-<span class="close" onclick="closeView()">✕</span>
 </div>
 </div>
 
-<script>
-function openView(images, title, price){
-document.getElementById("product-view").style.display = "flex";
-document.getElementById("view-title").innerText = title;
-document.getElementById("view-price").innerText = price;
-document.getElementById("main-img").src = images[0];
-
-let gallery = document.getElementById("gallery");
-gallery.innerHTML = "";
-
-images.forEach(img => {
-let thumb = document.createElement("img");
-thumb.src = img;
-thumb.alt = title + " thumbnail";
-thumb.onclick = () => {
-document.getElementById("main-img").src = img;
-};
-gallery.appendChild(thumb);
-});
-}
-
-function closeView(){
-document.getElementById("product-view").style.display = "none";
-}
-
-window.addEventListener("click", function(e){
-const modal = document.getElementById("product-view");
-if(e.target === modal){
-closeView();
-}
-});
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
